@@ -11,7 +11,7 @@ export default function Home() {
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <img
             className="w-full h-64 object-cover"
-            src="/public/images/cabin.jpg"
+            src="/public/images/portugal.png"
             alt="Cabin in rural Portugal"
           />
           
