@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import BookingForm from './components/BookingForm';
+import { readdir } from 'fs/promises';
+import path from 'path';
 
-export default function Home() {
+export default async function Home() {
+  const publicDirContents = await getPublicDirContents();
+
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
@@ -31,26 +35,23 @@ export default function Home() {
         <div className="mt-4 p-4 bg-gray-200 rounded">
           <p>Image path: /images/cabin.jpg</p>
           <p>Public directory contents:</p>
-          <pre>{JSON.stringify(process.env.PUBLIC_DIR_CONTENTS, null, 2)}</pre>
+          <pre>{JSON.stringify(publicDirContents, null, 2)}</pre>
         </div>
       </div>
     </div>
   );
 }
 
-export async function getStaticProps() {
-  const fs = require('fs');
-  const path = require('path');
-
+async function getPublicDirContents() {
   const publicDir = path.join(process.cwd(), 'public');
-  const contents = fs.readdirSync(publicDir, { withFileTypes: true });
-
-  return {
-    props: {
-      PUBLIC_DIR_CONTENTS: contents.map(dirent => ({
-        name: dirent.name,
-        isDirectory: dirent.isDirectory()
-      }))
-    }
-  };
+  try {
+    const contents = await readdir(publicDir, { withFileTypes: true });
+    return contents.map(dirent => ({
+      name: dirent.name,
+      isDirectory: dirent.isDirectory()
+    }));
+  } catch (error) {
+    console.error('Error reading public directory:', error);
+    return [];
+  }
 }
