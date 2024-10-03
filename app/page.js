@@ -1,22 +1,18 @@
 import Image from 'next/image';
 import BookingForm from './components/BookingForm';
-import { readdir } from 'fs/promises';
-import path from 'path';
 
-export default async function Home() {
-  const publicDirContents = await getPublicDirContents();
-
+export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Guincho, Portugal Camper Retreat
+          Guincho Portugal Camper Retreat
         </h1>
         
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <Image
             src="/portugal.png"
-            alt="Scenic view of our retreat in Portugal"
+            alt="Scenic view of our camper retreat in Guincho, Portugal"
             width={800}
             height={400}
             layout="responsive"
@@ -27,15 +23,16 @@ export default async function Home() {
               Book Your Stay
             </h2>
             
+            <p className="text-gray-600 mb-6">
+              Welcome to our delightful camper booking in the Guincho region of Portugal. 
+              Nestled in this beautiful coastal area, our camper retreat offers a unique 
+              and memorable stay. Submit your interest below, and we'll contact you 
+              back with availability and further details to make your Guincho adventure 
+              a reality.
+            </p>
+            
             <BookingForm />
           </div>
-        </div>
-        
-        {/* Debugging information */}
-        <div className="mt-4 p-4 bg-gray-200 rounded">
-          <p>Image path: /portugal.png</p>
-          <p>Public directory contents:</p>
-          <pre>{JSON.stringify(publicDirContents, null, 2)}</pre>
         </div>
       </div>
     </div>
