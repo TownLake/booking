@@ -15,8 +15,8 @@ export default async function Home() {
         
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <Image
-            src="/images/portugal.png"
-            alt="Scenic view of our cabin in rural Portugal"
+            src="/portugal.png"
+            alt="Scenic view of our retreat in Portugal"
             width={800}
             height={400}
             layout="responsive"
@@ -33,7 +33,7 @@ export default async function Home() {
         
         {/* Debugging information */}
         <div className="mt-4 p-4 bg-gray-200 rounded">
-          <p>Image path: /images/cabin.jpg</p>
+          <p>Image path: /portugal.png</p>
           <p>Public directory contents:</p>
           <pre>{JSON.stringify(publicDirContents, null, 2)}</pre>
         </div>
