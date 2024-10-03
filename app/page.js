@@ -26,7 +26,7 @@ export default function Home() {
             <p className="text-gray-600 mb-6">
               Welcome to our delightful camper booking in the Guincho region of Portugal. 
               Nestled in this beautiful coastal area, our camper retreat offers a unique 
-              and memorable stay. Submit your interest below, and we'll contact you 
+              and memorable stay. Submit your interest below, and we&apos;ll contact you 
               back with availability and further details to make your Guincho adventure 
               a reality.
             </p>
