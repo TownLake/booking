@@ -5,13 +5,13 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Rural Portuguese Cabin Retreat
+          Rural Portuguese Retreat
         </h1>
         
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
           <img
             className="w-full h-64 object-cover"
-            src="/api/placeholder/800/400"
+            src="/public/images/cabin.jpg"
             alt="Cabin in rural Portugal"
           />
           
