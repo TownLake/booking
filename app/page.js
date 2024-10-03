@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Guincho Portugal Camper Retreat
+          Guincho 🇵🇹 Camper Retreat
         </h1>
         
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -24,11 +24,11 @@ export default function Home() {
             </h2>
             
             <p className="text-gray-600 mb-6">
-              Welcome to our delightful camper booking in the Guincho region of Portugal. 
+              Welcome to our delightful camper in the Guincho region of Portugal. 
               Nestled in this beautiful coastal area, our camper retreat offers a unique 
-              and memorable stay. Submit your interest below, and we&apos;ll contact you 
-              back with availability and further details to make your Guincho adventure 
-              a reality.
+              and memorable stay. Fill out the form below with your details and preferred dates, 
+              and we&apos;ll contact you back with availability and further information to make 
+              your Guincho adventure a reality.
             </p>
             
             <BookingForm />
