@@ -10,7 +10,7 @@ export default async function Home() {
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Rural Portuguese Cabin Retreat
+          Guincho, Portugal Camper Retreat
         </h1>
         
         <div className="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -40,18 +40,4 @@ export default async function Home() {
       </div>
     </div>
   );
-}
-
-async function getPublicDirContents() {
-  const publicDir = path.join(process.cwd(), 'public');
-  try {
-    const contents = await readdir(publicDir, { withFileTypes: true });
-    return contents.map(dirent => ({
-      name: dirent.name,
-      isDirectory: dirent.isDirectory()
-    }));
-  } catch (error) {
-    console.error('Error reading public directory:', error);
-    return [];
-  }
 }
