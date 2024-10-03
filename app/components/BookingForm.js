@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 export default function BookingForm() {
@@ -13,7 +15,7 @@ export default function BookingForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-4">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-gray-700">
           Name
@@ -74,7 +76,7 @@ export default function BookingForm() {
         />
       </div>
       
-      <div>
+      <div className="sm:col-span-2">
         <button
           type="submit"
           className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
